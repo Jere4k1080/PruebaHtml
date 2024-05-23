@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="openModalBtn">Abrir Modal de Contacto</button>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contacto</h2>
+            <form id="contactForm">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="confirmationMessage" style="display: none;">
+                <p>Mensaje enviado, te contactaremos en 24 horas.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+    const modal = document.getElementById("contactModal");
+    const btn = document.getElementById("openModalBtn");
+    const span = document.getElementsByClassName("close")[0];
+    const form = document.getElementById("contactForm");
+    const confirmationMessage = document.getElementById("confirmationMessage");
+
+    // Open the modal
+    btn.onclick = function() {
+        modal.style.display = "flex";
+    }
+
+    // Close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Close the modal when clicking outside of the modal content
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Handle form submission
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Show the confirmation message
+        form.style.display = 'none';
+        confirmationMessage.style.display = 'block';
+    });
+});
+
+    </script>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

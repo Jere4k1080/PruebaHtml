@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Modal</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Incluye Bootstrap para estilos rápidos -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content custom-modal">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="rut">RUT Chileno</label>
+                            <input type="text" class="form-control" id="rut" placeholder="Ingrese su RUT" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Contraseña</label>
+                            <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Ingresar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>document.addEventListener('DOMContentLoaded', (event) => {
+        $('#loginModal').modal('show');
+    
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const rut = document.getElementById('rut').value;
+            if (validateRUT(rut)) {
+                alert('Login exitoso');
+                $('#loginModal').modal('hide');
+            } else {
+                alert('RUT inválido');
+            }
+        });
+    
+        function validateRUT(rut) {
+            rut = rut.replace(/\./g, '').replace('-', '');
+            const body = rut.slice(0, -1);
+            const dv = rut.slice(-1).toUpperCase();
+    
+            if (body.length < 7) return false;
+    
+            let sum = 0;
+            let multiplier = 2;
+    
+            for (let i = body.length - 1; i >= 0; i--) {
+                sum += body.charAt(i) * multiplier;
+                multiplier = multiplier === 7 ? 2 : multiplier + 1;
+            }
+    
+            const mod = sum % 11;
+            const computedDV = mod === 0 ? '0' : mod === 1 ? 'K' : String(11 - mod);
+    
+            return computedDV === dv;
+        }
+    });
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
