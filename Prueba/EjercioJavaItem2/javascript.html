@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Pares al Cuadrado</title>
+</head>
+<body>
+    <h1>Números Pares al Cuadrado</h1>
+    <script>
+        function obtenerNumerosPares(arr) {
+            return arr.filter(numero => numero % 2 === 0);
+        }
+
+        function elevarNumerosAlCuadrado(arr) {
+            return arr.map(numero => numero * numero);
+        }
+
+        function mostrarResultado() {
+            var valores = [];
+            for (var i = 0; i < 5; i++) {
+                var valor = parseInt(prompt("Ingrese un número:"));
+                valores.push(valor);
+            }
+
+            var pares = obtenerNumerosPares(valores);
+            var paresElevados = elevarNumerosAlCuadrado(pares);
+
+            var resultadoHTML = "<p>Valores ingresados por el usuario: " + valores.join(", ") + "</p>";
+            resultadoHTML += "<p>Números pares: " + pares.join(", ") + "</p>";
+            resultadoHTML += "<p>Números pares elevados al cuadrado: " + paresElevados.join(", ") + "</p>";
+
+            document.getElementById("resultado").innerHTML = resultadoHTML;
+        }
+    </script>
+    <button onclick="mostrarResultado()">Mostrar Resultado</button>
+    <div id="resultado"></div>
+</body>
+</html>

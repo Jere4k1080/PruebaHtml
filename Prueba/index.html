@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Region De La Araucania</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="#"><span class="text-warning">Car</span>Sale</a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Inicio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Login</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contactenos</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+
+    <section class="services section-padding" id="zonas">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-header text-center pb-5">
+					<h2 style="color: #000000;">Ventas De Autos</h2>
+						
+                        
+    <button onclick="document.getElementById('modal').style.display='block'">Login</button width="50">
+
+
+    <div id="modal" class="modal">
+
+  
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal').style.display='none'">&times;</span>
+    <h2>Ingrese su Rut y Clave</h2>
+    <form>
+      <label for="rut">RUT:</label>
+      <input type="text" id="rut" name="rut" required><br><br>
+      <label for="clave">Clave:</label>
+      <input type="password" id="clave" name="clave" required><br><br>
+      <button type="submit">Entrar</button>
+    </form>
+    </div>
+
+    </div>
+
+    <script>
+
+    window.onclick = function(event) {
+    var modal = document.getElementById('modal');
+    if (event.target == modal) {
+    modal.style.display = "none";
+     }
+    }
+    </script>
+
+
+
+
+<button onclick="document.getElementById('modal2').style.display='block'">Contáctenos</button>
+
+<!-- El modal -->
+<div id="modal2" class="modal2">
+
+  <!-- Contenido del modal -->
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('modal2').style.display='none'">&times;</span>
+    <h2>Contáctenos</h2>
+    <form id="contact-form">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono"><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+      <label for="mensaje">Mensaje:</label><br>
+      <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+</div>
+
+<script>
+
+window.onclick = function(event) {
+  var modal = document.getElementById('modal');
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+document.getElementById("contact-form").onsubmit = function(event) {
+  event.preventDefault(); 
+  
+  setTimeout(function() {
+    alert("Mensaje enviado. Te contactaremos en un plazo de 23 horas.");
+    document.getElementById('modal').style.display = 'none'; 
+
+  }, 1000); 
+};
+</script>
+
+
+
+
+
+					</div>
+				</div>
+			</div>
+			<section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-12 col-lg-4">
+                            <div class="card text-white text-center bg-dark pb-2">
+                                <div class="card-body">
+                                    <h3 class="card-title">Modelo 1</h3>
+                                    <img src="img/5s9mpqz8u64c2s7j3i3dyd6lx.jpg" alt="img/5s9mpqz8u64c2s7j3i3dyd6lx.jpg" width="350">
+                                    <p class="lead">Marca: Hyunday
+                                        Modelo: Tucson 
+                                        Año: 2014
+                                        Km: 124.000
+                                        $12.990.000
+                                    </p>    
+                                    <a class="btn btn-warning text-dark" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.chileautos.cl%2Fvehiculos%2Fhyundai%2Ftucson%2F2014-ano%2Fmetropolitana-de-santiago-regi%25C3%25B3n%2F&psig=AOvVaw1uOXU_TZAVRvPKmHp3Y2Rb&ust=1715360093433000&source=images&cd=vfe&opi=89978449&ved=0CBIQjhxqFwoTCJD88buEgYYDFQAAAAAdAAAAABAD">Ver+</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-4">
+                            <div class="card text-white text-center bg-dark pb-2">
+                                <div class="card-body">
+                                    <h3 class="card-title">Modelo 2</h3>
+                                    <img src="img/44ulsw0mldjljy3v12cbt29aa.jpg" alt="img/44ulsw0mldjljy3v12cbt29aa.jpg" width="345">
+                                    <p class="lead">Marca: BMW
+                                        Modelo: 32Oi
+                                        Año: 2011
+                                        Km: 112.000
+                                        $13.990.000 
+                                    </p>
+                                    <a class="btn btn-warning text-dark" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.chileautos.cl%2Fvehiculos%2Fautos-veh%25C3%25ADculo%2Fbmw%2F320i%2F2011-ano%2F&psig=AOvVaw2urFaKVNIZIgXVL0D3Ue5i&ust=1715360451886000&source=images&cd=vfe&opi=89978449&ved=0CBIQjhxqFwoTCMDTge6FgYYDFQAAAAAdAAAAABAD">Ver+</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-4">
+                            <div class="card text-white text-center bg-dark pb-2">
+                                <div class="card-body">
+                                    <h3 class="card-title">Modelo 3</h3>
+                                    <img src="img/dqwsl7z83ncu2g0xftw1q79l9.jpg" alt="img/dqwsl7z83ncu2g0xftw1q79l9.jpg" width="350">
+                                    <p class="lead">Marca: Hyunday
+                                        Modelo: Elantra
+                                        Año: 2011
+                                        Km: 158.000
+                                        $7.990.000 
+                                    </p>
+                                    <a class="btn btn-warning text-dark" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.chileautos.cl%2Fvehiculos%2Fautos-veh%25C3%25ADculo%2Fusado-tipo%2Fhyundai%2Felantra%2F&psig=AOvVaw2p6sJz4xwunligEORQ_atB&ust=1715361029407000&source=images&cd=vfe&opi=89978449&ved=0CBIQjhxqFwoTCJCsivmHgYYDFQAAAAAdAAAAABAJ">Ver+</a>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <section class="services section-padding" id="Inicio">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="section-header text-center pb-5">
+                                        <h2 style="color: #000000;">Mas Modelos</h2>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-12 col-lg-4">
+                            <div class="card text-white text-center bg-dark pb-2">
+                                <div class="card-body">
+                                    <h3 class="card-title">Modelo 4</h3>
+                                    <img src="img/a4buq4tg04dyzwv9i2fq3feav.jpg" alt="img/a4buq4tg04dyzwv9i2fq3feav.jpg" width="350">
+                                    <p class="lead">Marca: Citroen
+                                                    Modelo: C4 Cactus
+                                                    Año: 2020
+                                                    Km: 24.000
+                                                    $12.990.000 </p>
+                                    <a class="btn btn-warning text-dark" href="https://autosusados.cl/autos/CITROEN/C4%20CACTUS/1/1148625">Ver+</a>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-12 col-md-12 col-lg-4">
+                            <div class="card text-white text-center bg-dark pb-2">
+                                <div class="card-body">
+                                    <h3 class="card-title">Modelo 5</h3>
+                                    <img src="img/sail.jpg" alt="img/sail.jpg" width="350">
+                                    <p class="lead">Marca: Chevrolet
+                                                    Modelo: Sail
+                                                    Año: 2018
+                                                    Km: 75.000
+                                                    $5.990.000 </p>
+                                    <a class="btn btn-warning text-dark" href="https://www.chileautos.cl/vehiculos/chevrolet/sail/2018-ano/">Ver+</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-4">
+                            <div class="card text-white text-center bg-dark pb-2">
+                                <div class="card-body">
+                                    <h3 class="card-title">Modelo 6</h3>
+                                    <img src="img/volk.jpg" alt="img/volk.jpg" width="350">
+                                    <p class="lead">Marca: Volkswagen
+                                        Modelo: Beetle
+                                        Año: 2005
+                                        Km: 185.000
+                                        $7.990.000</p>
+                                    <a class="btn btn-warning text-dark" href="https://www.chileautos.cl/vehiculos/autos-veh%C3%ADculo/usado-tipo/volkswagen/the-beetle/2.0-mecanico-full-distintivo/">Ver+</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="services section-padding" id="Inicio">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-header text-center pb-5">
+                            <h2 style="color: #000000;">Seccion Alta Gama</h2>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+            
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <h3 class="card-title">Modelo Alta Gama 1</h3>
+                            <img src="img/x6.jpg" alt="img/x6.jpg" width="350">
+                            <p class="lead">Marca: BMW
+                                            Modelo: BMW X6 3.0 XDrive30D A M Sport
+                                            Año: 2023
+                                            Km: 13.000
+                                            $84,990,000 </p>
+                            <a class="btn btn-warning text-dark" href="https://www.chileautos.cl/vehiculos/bmw/x6/m-sport-distintivo/">Ver+</a>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <h3 class="card-title">Modelo Alta Gama 2</h3>
+                            <img src="img/audi.jpg" alt="img/audi.jpg" width="350">
+                            <p class="lead">Marca: Audi
+                                            Modelo: R8
+                                            Año: 2010
+                                            Km: 90.000
+                                            $49.990.000 </p>
+                            <a class="btn btn-warning text-dark" href="https://www.chileautos.cl/vehiculos/detalles/2010-audi-r8/CL-AD-16679006/?Cr=2">Ver+</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <h3 class="card-title">Modelo Alta Gama 3</h3>
+                            <img src="img/mercedes.jpg" alt="img/mercedes.jpg" width="350">
+                            <p class="lead">Marca: Mercedes Benz
+                                Modelo: C 63 Amg
+                                Año: 2019
+                                Km: 25.000
+                                $79.990.000</p>
+                            <a class="btn btn-warning text-dark" href="https://www.chileautos.cl/vehiculos/detalles/2019-mercedes-benz-c-63-amg-4-0-mercedes-amg-c63-auto/CL-AD-16582957/?Cr=0">Ver+</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script> 
+</body>
+</html>
+
